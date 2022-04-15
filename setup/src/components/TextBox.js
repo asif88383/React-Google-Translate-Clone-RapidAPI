@@ -1,20 +1,19 @@
-import SelectDropDown from "./SelectDropDown";
+import SelectDropDown from './SelectDropDown'
 
-const TextBox = ({  // TextBox is a component that renders the input and output text boxes
+const TextBox = ({
   style,
-  selectedLanguage,
   setShowModal,
+  selectedLanguage,
   setTextToTranslate,
   textToTranslate,
   translatedText,
   setTranslatedText,
 }) => {
-    
-    const handleClick = () => {   // handleClick is called when the user clicks on the button
-        setTextToTranslate('')
-        setTranslatedText('')
-    };  // end of handleClick
 
+  const handleClick = () => {
+    setTextToTranslate('')
+    setTranslatedText('')
+  }
   return (
     <div className={style}>
       <SelectDropDown
@@ -23,16 +22,19 @@ const TextBox = ({  // TextBox is a component that renders the input and output 
         selectedLanguage={selectedLanguage}
       />
       <textarea
-        placeholder={style === "input" ? "Enter Text" : "Translated Text"}
-        disabled={style === "output"}
+        disabled={style === 'output'}
+        className={style}
+        placeholder={style === 'input' ? 'Enter text' : 'Translation'}
         onChange={(e) => setTextToTranslate(e.target.value)}
-        value={style === "input" ? textToTranslate : translatedText}
+        value={style === 'input' ? textToTranslate : translatedText}
       />
-      {style === "input" && (
-          <div className="delete" onClick={handleClick}>✘</div>
-        )}
+      {style === 'input' && (
+        <div className="delete" onClick={handleClick}>
+          ˟
+        </div>
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default TextBox;
+export default TextBox

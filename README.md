@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Getting Started Google Translate Clone MERN Stack App
+
+<div align="center">
+   <div align="center">
+    <img src="preview1.png" width='700'/>
+    <br/>
+    <hr />
+    <br />
+    <img src="preview2.png" width='700'/>
+  </div>
+</div>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start:frontend`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

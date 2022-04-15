@@ -36,7 +36,7 @@ const App = () => {
   
 
   return (
-    <div className="App">
+    <div className="app">
       {!showModal && (
         <>
           <TextBox
@@ -65,8 +65,8 @@ const App = () => {
       <Modal 
         setShowModal={setShowModal} 
         languages={languages}
-        chosenLanguage={showModal == 'input' ? inputLanguage : outputLanguage}
-        setChosenLanguage={showModal == 'input' ? setInputLanguage : setOutputLanguage}
+        chosenLanguage={showModal === 'input' ? inputLanguage : outputLanguage}
+        setChosenLanguage={showModal === 'input' ? setInputLanguage : setOutputLanguage}
       />
       }
     </div>
