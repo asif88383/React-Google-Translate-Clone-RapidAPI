@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Modal = ({setShowModal, languages}) => {
+const Modal = ({setShowModal, languages, chosenLanguage, setChosenLanguage}) => {
     const [searchedLanguage, setSearchedLanguage] = useState("");
 
     const filteredLanguages = languages.filter(language => {
@@ -12,7 +12,7 @@ const Modal = ({setShowModal, languages}) => {
     };
 
     const handleClick = (e) => {
-        // setChosenLanguage(e.target.value);
+        setChosenLanguage(e.target.textContent);
         setShowModal(null);
     };
 
@@ -39,14 +39,14 @@ const Modal = ({setShowModal, languages}) => {
                     {filteredLanguages?.map((filteredLanguage, _index) => (
                         <div className="list-item">
                             <div className="icon">
-                                {/* {chosenLanguage === filteredLanguage ? '🗸' : ''} */}
+                                {chosenLanguage === filteredLanguage ? '🗸' : ''}
                             </div>
                             <li
                                 key={_index}
                                 onclick={handleClick}
-                                // style={{
-                                //     color:chosenLanguage === filteredLanguage ? '#8ab4f8' : null
-                                // }}
+                                style={{
+                                    color:chosenLanguage === filteredLanguage ? '#8ab4f8' : null
+                                }}
                             >
                                 {filteredLanguage}
                             </li>
