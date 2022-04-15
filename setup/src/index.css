@@ -49,3 +49,21 @@ textarea{
     margin-top: 18px;
 }
 
+.output textarea {
+    background-color: #303134;
+}
+
+.select-drop-down input{
+    color: #8ab4f8;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+.select-drop-down .down-arrow svg{
+    position: relative;
+    left: 265px;
+    top: -33px;
+    width: 26px;
+    height: 26px;
+    fill: #8ab4f8;
+}
