@@ -3,12 +3,12 @@ import Arrows from "./components/Arrows";
 import TextBox from "./components/TextBox";
 import Button from "./components/Button";
 import Modal from "./components/Modal";
-import axios from 'axios';
+import axios from "axios";
 
 const App = () => {
   const [showModal, setShowModal] = useState(null);
   const [inputLanguage, setInputLanguage] = useState("English");
-  const [outputLanguage, setOutputLanguage] = useState("Urdu");
+  const [outputLanguage, setOutputLanguage] = useState("German");
   const [languages, setLanguages] = useState(null);
   const [textToTranslate, setTextToTranslate] = useState("");
   const [translatedText, setTranslatedText] = useState("");
@@ -24,8 +24,7 @@ const App = () => {
       },
     };
 
-    axios
-      .request(options)
+    axios.request(options)
       .then(function (response) {
         console.log(response.data);
         const arrayOfData = Object.keys(response.data.data).map(key => {  return response.data.data[key] });

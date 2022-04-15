@@ -8,8 +8,8 @@ const TextBox = ({style, selectedLanguage, setShowModal}) => {
              setShowModal={setShowModal}
              selectedLanguage={selectedLanguage}/>
             <textarea 
-                placeholder={style == 'input' ? 'Enter Text' : 'Translated Text'}
-                disabled={style == 'output'}
+                placeholder={style === 'input' ? 'Enter Text' : 'Translated Text'}
+                disabled={style === 'output'}
             />
         </div>
     );
