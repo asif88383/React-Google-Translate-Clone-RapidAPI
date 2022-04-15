@@ -133,5 +133,13 @@ textarea{
 .button-container{
     color: #bdc1c6;
     padding: 18px;
-    height: 28px;
+    height: 20px;
+}
+
+.input .delete{
+    position: relative;
+    left: 265px;
+    top: -165px;
+    font-size: 50px;
+    color: #bdc1c6;
 }

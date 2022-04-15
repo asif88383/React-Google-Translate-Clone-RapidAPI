@@ -52,7 +52,7 @@ const App = () => {
     
     axios.request(options).then(function (response) {
       console.log(response.data);
-      setTranslatedText(response.data);
+      setTranslatedText(response.data.data.translation);
     }).catch(function (error) {
       console.error(error);
     });
@@ -76,6 +76,9 @@ const App = () => {
             selectedLanguage={inputLanguage}
             style="input"
             setShowModal={setShowModal}
+            textToTranslate={textToTranslate}
+            setTextToTranslate={setTextToTranslate}
+            setTranslatedText={setTranslatedText}
           />
           <div className="arrow-container" onClick={handleClick}>
             <Arrows />
@@ -84,6 +87,7 @@ const App = () => {
             selectedLanguage={outputLanguage}
             style="output"
             setShowModal={setShowModal}
+            translatedText={translatedText}
           />
           <div className="button-container" onClick={translateText}>
             <Button />
