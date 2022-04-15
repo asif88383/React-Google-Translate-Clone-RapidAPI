@@ -86,6 +86,9 @@ const App = () => {
             style="output"
             setShowModal={setShowModal}
           />
+          <div className="button-container" onClick={translateText}>
+            <Button />
+          </div>
         </>
       )}
       {showModal && 
